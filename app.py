@@ -178,4 +178,4 @@ def print_rating(n_clicks,rating):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run_server(debug=True)
