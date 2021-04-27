@@ -21,7 +21,7 @@ dash-core-components
 dash-html-components
 dash-renderer
 dash-table
-torch
+#torch
 plotly 
 pydub
 
