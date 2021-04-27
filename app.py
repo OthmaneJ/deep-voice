@@ -4,7 +4,6 @@ import math
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
-import numpy as np
 # import plotly.express as px
 # from IPython.display import Audio
 # from IPython.utils import io
@@ -12,13 +11,11 @@ import numpy as np
 # from encoder import inference as encoder
 # from vocoder import inference as vocoder
 from pathlib import Path
-import numpy as np
+# import numpy as np
 import librosa
 import scipy
 import pydub
-
 import soundfile as sf
-
 import json
 
 with open('latest_embeddings.json') as f:
