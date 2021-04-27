@@ -5,8 +5,7 @@ import dash
 import dash_html_components as html
 import dash_core_components as dcc
 import numpy as np
-import plotly.express as px
-
+# import plotly.express as px
 # from IPython.display import Audio
 # from IPython.utils import io
 # from synthesizer.inference import Synthesizer
