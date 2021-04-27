@@ -4,63 +4,33 @@ import math
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
-import numpy as np
-import pandas as pd
-import plotly.express as px
-
+# import plotly.express as px
 # from IPython.display import Audio
 # from IPython.utils import io
-from synthesizer.inference import Synthesizer
-from encoder import inference as encoder
-from vocoder import inference as vocoder
+# from synthesizer.inference import Synthesizer
+# from encoder import inference as encoder
+# from vocoder import inference as vocoder
 from pathlib import Path
-import numpy as np
+# import numpy as np
 import librosa
 import scipy
 import pydub
-
 import soundfile as sf
-
 import json
-
-# from pydrive.auth import GoogleAuth
-# from pydrive.drive import GoogleDrive
-# from google.colab import auth
-# from oauth2client.client import GoogleCredentials
-
-# with open('embeddings.json') as f:
-#   embeddings = json.load(f)
 
 with open('latest_embeddings.json') as f:
   new_embeddings = json.load(f)
 
 
-# celebrities = ['Kevin Hart','Morgan Freeman','Tom Cruise']
-# celebrities = embeddings.keys()
 celebrities = [el['name'] for el in new_embeddings]
 
-# auth.authenticate_user()
-# gauth = GoogleAuth()
-# gauth.credentials = GoogleCredentials.get_application_default()
-# drive = GoogleDrive(gauth)
+# encoder_weights = Path("./encoder/saved_models/pretrained.pt")
+# vocoder_weights = Path("./vocoder/saved_models/pretrained.pt")
+# syn_dir = Path("./synthesizer/saved_models/pretrained/pretrained.pt")
+# encoder.load_model(encoder_weights)
+# synthesizer = Synthesizer(syn_dir)
+# vocoder.load_model(vocoder_weights)
 
-
-encoder_weights = Path("./encoder/saved_models/pretrained.pt")
-vocoder_weights = Path("./vocoder/saved_models/pretrained.pt")
-syn_dir = Path("./synthesizer/saved_models/pretrained/pretrained.pt")
-encoder.load_model(encoder_weights)
-synthesizer = Synthesizer(syn_dir)
-vocoder.load_model(vocoder_weights)
-
-# def write(f, sr, x, normalized=False):
-#     """numpy array to MP3"""
-#     channels = 2 if (x.ndim == 2 and x.shape[1] == 2) else 1
-#     if normalized:  # normalized array - each item should be a float in [-1, 1)
-#         y = np.int16(x * 2 ** 15)
-#     else:
-#         y = np.int16(x)
-#     song = pydub.AudioSegment(y.tobytes(), frame_rate=sr, sample_width=2, channels=channels)
-#     song.export(f, format="mp3", bitrate="320k")
 
 external_stylesheets = [
     "https://use.fontawesome.com/releases/v5.0.7/css/all.css",
