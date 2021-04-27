@@ -15,7 +15,7 @@ from pathlib import Path
 import librosa
 import scipy
 import pydub
-import soundfile as sf
+# import soundfile as sf
 import json
 
 with open('latest_embeddings.json') as f:
